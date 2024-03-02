@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/admin/*": ["./components/admin/*"],
+      "@/web/*": ["./components/web/*"],
+
     }
   }
 }
+  
