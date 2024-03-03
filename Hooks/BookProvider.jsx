@@ -15,14 +15,13 @@ export const BookProvider = ({ children }) => {
     }
     const [isPending, startTransition] = useTransition()
 
+    console.log(Books)
     const someDirty = Object.keys(Books).length > 0
     const onSave = () => {
         setBook({})
         startTransition(() => {
-
             save(Books)
         })
-
     }
     return (
         <BooksContext.Provider value={{ someDirty, saveChanges: onSave, Books, addDirtyBook }} >
